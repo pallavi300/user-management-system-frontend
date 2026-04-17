@@ -17,7 +17,7 @@ export function Button({
     secondary:
       "bg-white/70 hover:bg-white border border-black/10 text-neutral-900 dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 dark:text-white",
     danger:
-      "bg-red-600 text-white hover:bg-red-500 dark:bg-red-500 dark:hover:bg-red-400",
+      "bg-red-700 text-white hover:bg-red-500 dark:bg-red-500 dark:hover:bg-red-400",
   };
 
   return (
@@ -28,4 +28,3 @@ export function Button({
     />
   );
 }
-

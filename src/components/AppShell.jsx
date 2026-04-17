@@ -70,4 +70,3 @@ export function AppShell() {
     </div>
   );
 }
-
