@@ -9,8 +9,9 @@ export function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [email, setEmail] = useState("admin@example.com");
-  const [password, setPassword] = useState("Password@123");
+  const isProd = import.meta.env.PROD;
+  const [email, setEmail] = useState(isProd ? "" : "admin@example.com");
+  const [password, setPassword] = useState(isProd ? "" : "Password@123");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -75,9 +76,11 @@ export function Login() {
           </form>
         </Card>
 
-        <div className="mt-4 text-xs text-neutral-600 dark:text-neutral-300 text-center">
-          Demo: admin@example.com / Password@123
-        </div>
+        {!isProd ? (
+          <div className="mt-4 text-xs text-neutral-600 dark:text-neutral-300 text-center">
+            Demo: admin@example.com / Password@123
+          </div>
+        ) : null}
       </div>
     </div>
   );
